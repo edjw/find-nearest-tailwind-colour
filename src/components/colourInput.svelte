@@ -13,7 +13,11 @@
 </label>
 
 <div class="flex mt-2 space-x-2">
-    <input class="w-48 rounded" type="text" bind:value={$userColour} />
+    <input
+        class="w-48 rounded"
+        name="colour"
+        type="text"
+        bind:value={$userColour} />
     {#if userColour !== null}
         <div class="w-10 h-10">
             <ColourBlock backgroundColourHexCode={$userColour} />
