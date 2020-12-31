@@ -26,10 +26,10 @@
 		content="Find the nearest colour from the Tailwind CSS color palette. Enter a hex colour code and get the class name colour for Tailwind CSS." />
 	<meta
 		property="og:image"
-		content="https://find-nearest-tailwind-colour.netlify.app/" />
+		content="https://find-nearest-tailwind-colour.netlify.app/social.png" />
 	<meta
 		property="og:url"
-		content="https://find-nearest-tailwind-colour.netlify.app/social.png" />
+		content="https://find-nearest-tailwind-colour.netlify.app" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
