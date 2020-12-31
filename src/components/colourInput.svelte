@@ -7,8 +7,8 @@
 <label class="block" for="colour">
     <span class="font-semibold">Enter your colour</span>
     <br />
-    <span class="text-sm text-gray-700">Type the hexcode of the colour you want
-        to match
+    <span class="text-sm text-gray-700">Type the hex colour code of the colour
+        you want to match
     </span>
 </label>
 
