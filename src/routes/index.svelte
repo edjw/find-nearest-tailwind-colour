@@ -17,20 +17,6 @@
 
 <svelte:head>
 	<title>Find the nearest Tailwind Colour</title>
-	<meta
-		name="description"
-		content="Find the nearest colour from the Tailwind CSS color palette. Enter a hex colour code and get the class name colour for Tailwind CSS." />
-	<meta property="og:title" content="Find the nearest Tailwind Colour" />
-	<meta
-		property="og:description"
-		content="Find the nearest colour from the Tailwind CSS color palette. Enter a hex colour code and get the class name colour for Tailwind CSS." />
-	<meta
-		property="og:image"
-		content="https://find-nearest-tailwind-colour.netlify.app/social.png" />
-	<meta
-		property="og:url"
-		content="https://find-nearest-tailwind-colour.netlify.app" />
-	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <header class="p-4 mt-1 -ml-4 -mr-4 bg-cyan-800 sm:rounded">
