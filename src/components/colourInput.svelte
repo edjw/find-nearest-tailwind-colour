@@ -15,7 +15,7 @@
 <div class="flex mt-2 space-x-2">
     <input
         class="w-48 rounded"
-        name="colour"
+        id="colour"
         type="text"
         bind:value={$userColour} />
     {#if userColour !== null}
