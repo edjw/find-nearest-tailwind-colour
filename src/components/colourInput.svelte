@@ -13,7 +13,7 @@
 
         <input
             placeholder="#FFFFFF"
-            class="block w-48 mt-4 rounded shadow focus:ring-cyan-800"
+            class="block w-48 mt-4 rounded shadow uppercase focus:ring-cyan-800"
             id="colour"
             type="text"
             title="Type a hex colour code"
