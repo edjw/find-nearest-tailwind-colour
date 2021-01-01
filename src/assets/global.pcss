@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* input[type="color"] {
-  appearance: none;
-  background-color: transparent;
-  border-color: #6b7280;
-  border-width: 1px;
-  border-radius: 0px;
-  /* padding-top: 0.5rem;
-  padding-right: 0.75rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-} */
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+
+  a {
+    @apply underline;
+  }
+
+  p {
+    @apply mt-4;
+  }
+}
