@@ -38,7 +38,7 @@
 
 			<p class="mt-0 text-gray-700">
 				Here's the nearest colour to
-				<code>{$userColour}</code>
+				<code>{$userColour.toUpperCase()}</code>
 				in Tailwind's default colour palette.
 			</p>
 
