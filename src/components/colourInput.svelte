@@ -13,9 +13,10 @@
 
         <input
             placeholder="#FFFFFF"
-            class="block w-48 mt-4 rounded"
+            class="block w-48 mt-4 rounded shadow focus:ring-cyan-800"
             id="colour"
             type="text"
+            title="Type a hex colour code"
             bind:value={$userColour} />
     </label>
 
@@ -23,7 +24,7 @@
         Or select a colour from a colour picker
         <input
             type="color"
-            class="block mt-2 rounded"
+            class="block mt-2 border-2 rounded shadow appearance-none border-cyan-800"
             bind:value={$userColour} />
     </label>
 </section>

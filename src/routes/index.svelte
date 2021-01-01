@@ -45,13 +45,13 @@
 			<p>
 				<span class="text-gray-700">Tailwind colour name: </span>
 				<span
-					class="w-48 px-4 py-1 mt-4 mb-2 font-semibold leading-loose underline border shadow-sm border-cyan-500">
+					class="w-48 px-4 py-1 mt-4 mb-2 font-semibold leading-loose underline border shadow border-cyan-500">
 					{nearestTailwindColour['name']}</span>
 			</p>
 
 			<p class="leading-loose text-gray-700 ">
 				Hex colour code:
-				{nearestTailwindColour['value']}
+				{nearestTailwindColour['value'].toUpperCase()}
 			</p>
 
 			<p class="text-gray-700 ">Preview</p>
