@@ -32,10 +32,16 @@
 	<section class="mt-8">
 		<ColourInput />
 	</section>
+	{#if $userColour != null && isValidColour($userColour)}
+		<section class="mt-10">
+			<p class="font-semibold">Nearest Tailwind Colour</p>
 
-	<section class="mt-10">
-		<p class="font-semibold">Nearest Tailwind Colour</p>
-		{#if $userColour != null && isValidColour($userColour)}
+			<p class="mt-0 text-gray-700">
+				Here's the nearest colour to
+				<code>{$userColour}</code>
+				in Tailwind's default colour palette.
+			</p>
+
 			<p>
 				<span class="text-gray-700">Tailwind colour name: </span>
 				<span
@@ -54,12 +60,8 @@
 				<ColourBlock
 					backgroundColourHexCode={nearestTailwindColour['value']} />
 			</div>
-		{:else}
-			<p class="mt-2 text-sm text-gray-700">
-				Enter a hex colour code above.
-			</p>
-		{/if}
-	</section>
+		</section>
+	{/if}
 </main>
 
 <footer

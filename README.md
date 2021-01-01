@@ -24,9 +24,9 @@ This will start the development server on [localhost:3000](http://localhost:3000
 
 To start a production version of your app that runs on Node, run `npm run build && npm start`. This will disable live reloading, and activate the appropriate bundler plugins.
 
-To create a static version of the site for Netlify/Vercel, run `npm run export`.
+To create a static version of the site for Netlify/Vercel, run `npm run export`. That's what is running at <https://find-nearest-tailwind-colour.netlify.app>
 
 ## Thanks and credit
 
-Thanks to Daniel Tao for his [`nearest-color` package](https://github.com/dtao/nearest-color) that has the algorithm to find the nearest colour.
+Thanks to [Daniel Tao for his `nearest-color` package](https://github.com/dtao/nearest-color) that has the algorithm to find the nearest colour.
 

@@ -1,27 +1,29 @@
 <script>
-    import ColourBlock from "./colourBlock.svelte";
-    import { isValidColour } from "../scripts/isValidColour";
     import { colour as userColour } from "../scripts/colourStore";
 </script>
 
-<label class="block" for="colour">
-    <span class="font-semibold">Enter your colour</span>
-    <br />
-    <span class="text-sm text-gray-700">Type the hex colour code of the colour
-        you want to match
-    </span>
-</label>
+<section class="mt-2">
+    <p class="font-semibold">Enter your colour, get a Tailwind colour name</p>
 
-<div class="flex mt-2 space-x-2">
-    <input
-        placeholder="#ffffff"
-        class="w-48 rounded"
-        id="colour"
-        type="text"
-        bind:value={$userColour} />
-    {#if $userColour !== null && isValidColour($userColour)}
-        <div class="w-10 h-10">
-            <ColourBlock backgroundColourHexCode={$userColour} />
-        </div>
-    {/if}
-</div>
+    <label class="block mt-0 text-gray-700">
+        Type a hex colour code like
+        <code>#FFFFFF</code>
+        or
+        <code>#ed3939</code>
+
+        <input
+            placeholder="#FFFFFF"
+            class="block w-48 mt-4 rounded"
+            id="colour"
+            type="text"
+            bind:value={$userColour} />
+    </label>
+
+    <label class="block mt-4 text-gray-700">
+        Or select a colour from a colour picker
+        <input
+            type="color"
+            class="block mt-2 rounded"
+            bind:value={$userColour} />
+    </label>
+</section>
