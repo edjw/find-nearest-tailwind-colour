@@ -1,4 +1,5 @@
 <script>
+    export const segment = "";
 </script>
 
 <style>

@@ -1,6 +1,6 @@
 <script>
     import ColourBlock from "./colourBlock.svelte";
-    let emptyString = "";
+    import { isValidColour } from "../scripts/isValidColour";
     import { colour as userColour } from "../scripts/colourStore";
 </script>
 
@@ -14,13 +14,14 @@
 
 <div class="flex mt-2 space-x-2">
     <input
+        placeholder="#ffffff"
         class="w-48 rounded"
         id="colour"
         type="text"
         bind:value={$userColour} />
-    {#if userColour !== null}
+    {#if $userColour !== null && isValidColour($userColour)}
         <div class="w-10 h-10">
             <ColourBlock backgroundColourHexCode={$userColour} />
         </div>
-    {:else}{emptyString}{/if}
+    {/if}
 </div>

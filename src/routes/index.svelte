@@ -3,14 +3,14 @@
 	import * as nearestColour from "nearest-color";
 	const getNearestTailwindColour = nearestColour.from(tailwindColours);
 
-	import { isHexColour } from "../scripts/isHexColour";
+	import { isValidColour } from "../scripts/isValidColour";
 
 	import ColourBlock from "../components/colourBlock.svelte";
 	import ColourInput from "../components/colourInput.svelte";
 	import { colour as userColour } from "../scripts/colourStore";
 	let nearestTailwindColour = null;
 
-	$: if ($userColour != null && isHexColour($userColour)) {
+	$: if ($userColour != null && isValidColour($userColour)) {
 		nearestTailwindColour = getNearestTailwindColour($userColour);
 	}
 </script>
@@ -30,12 +30,12 @@
 
 <main>
 	<section class="mt-8">
-		<ColourInput colour={$userColour} />
+		<ColourInput />
 	</section>
 
 	<section class="mt-10">
 		<p class="font-semibold">Nearest Tailwind Colour</p>
-		{#if $userColour != null && isHexColour($userColour)}
+		{#if $userColour != null && isValidColour($userColour)}
 			<p>
 				<span class="text-gray-700">Tailwind colour name: </span>
 				<span
