@@ -3,7 +3,7 @@
 </script>
 
 <section class="mt-2">
-    <p class="font-semibold">Enter your colour, get a Tailwind colour name</p>
+    <p class="font-semibold">Enter a colour, get a Tailwind colour name</p>
 
     <label class="block mt-0 text-gray-700">
         Type a hex colour code like
@@ -13,7 +13,7 @@
 
         <input
             placeholder="#FFFFFF"
-            class="block w-48 mt-4 rounded shadow uppercase focus:ring-cyan-800"
+            class="block w-48 mt-4 uppercase rounded shadow focus:ring-cyan-800"
             id="colour"
             type="text"
             title="Type a hex colour code"
@@ -21,10 +21,10 @@
     </label>
 
     <label class="block mt-4 text-gray-700">
-        Or select a colour from a colour picker
+        Or select a colour from this colour picker
         <input
             type="color"
-            class="block mt-2 border-2 rounded shadow appearance-none border-cyan-800"
+            class="block w-20 h-10 mt-2 border-2 rounded shadow appearance-none border-cyan-800"
             bind:value={$userColour} />
     </label>
 </section>
