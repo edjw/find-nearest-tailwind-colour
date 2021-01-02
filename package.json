@@ -1,6 +1,6 @@
 {
   "name": "find-nearest-tailwind-colour",
-  "description": "Find the nearest colour from Tailwind's default colour palette",
+  "description": "Find the nearest colour from Tailwind's colour palette",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {

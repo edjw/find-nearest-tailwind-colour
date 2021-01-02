@@ -1,6 +1,6 @@
 # Find the nearest Tailwind colour
 
-[Find the nearest Tailwind colour](https://find-nearest-tailwind-colour.netlify.app) is a web app to help you find the nearest colour from [the Tailwind CSS default colour palette](https://tailwindcss.com/docs/customizing-colors).
+[Find the nearest Tailwind colour](https://find-nearest-tailwind-colour.netlify.app) is a web app to help you find the nearest colour from [the full Tailwind CSS colour palette](https://tailwindcss.com/docs/customizing-colors).
 
 <https://find-nearest-tailwind-colour.netlify.app>
 

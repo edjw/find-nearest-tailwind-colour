@@ -8,10 +8,20 @@
 	import ColourBlock from "../components/colourBlock.svelte";
 	import ColourInput from "../components/colourInput.svelte";
 	import { colour as userColour } from "../scripts/colourStore";
+
 	let nearestTailwindColour = null;
+	let tailwindColourVariant = null;
+	let tailwindColourValue = null;
+	let tailwindBaseColourName = null;
 
 	$: if ($userColour != null && isValidColour($userColour)) {
 		nearestTailwindColour = getNearestTailwindColour($userColour);
+		tailwindColourVariant = nearestTailwindColour["name"];
+		tailwindColourValue = nearestTailwindColour["value"];
+		tailwindBaseColourName = tailwindColourVariant.replace(
+			/-\d{2,3}$/gi,
+			""
+		);
 	}
 </script>
 
@@ -24,7 +34,7 @@
 	<p class="mt-2 text-cyan-100">
 		A tool to find the nearest colour from
 		<a href="https://tailwindcss.com/docs/customizing-colors">
-			the default Tailwind colour palette</a>
+			the Tailwind colour palette</a>
 	</p>
 </header>
 
@@ -39,26 +49,25 @@
 			<p class="mt-0 text-gray-700">
 				Here's the nearest colour to
 				<code>{$userColour.toUpperCase()}</code>
-				in Tailwind's default colour palette.
+				in Tailwind's full colour palette.
 			</p>
 
 			<p>
 				<span class="text-gray-700">Tailwind colour name: </span>
 				<span
 					class="w-48 px-4 py-1 mt-4 mb-2 font-semibold leading-loose underline border shadow border-cyan-500">
-					{nearestTailwindColour['name']}</span>
+					{tailwindColourVariant}</span>
 			</p>
 
 			<p class="leading-loose text-gray-700 ">
 				Hex colour code:
-				{nearestTailwindColour['value'].toUpperCase()}
+				{tailwindColourValue.toUpperCase()}
 			</p>
 
 			<p class="text-gray-700 ">Preview</p>
 
 			<div class="w-48 h-20">
-				<ColourBlock
-					backgroundColourHexCode={nearestTailwindColour['value']} />
+				<ColourBlock backgroundColourHexCode={tailwindColourValue} />
 			</div>
 		</section>
 	{/if}
