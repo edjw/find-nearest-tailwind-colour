@@ -25,7 +25,7 @@
     }
 
     import ColourBlock from "./colourBlock.svelte";
-    import ColourNameResultBox from "./tailwindColourNameResultBox";
+    import ColourNameResultBox from "./tailwindColourNameResultBox.svelte";
 
     const defaultTailwindColours = [
         "black",
