@@ -153,9 +153,10 @@ module&period;exports &equals; &lcub;
         </p>
 
         <p>
-            If you extend the configuration to use one of the "purple" colours
-            from the full palette and you also want to use a "violet" colour,
-            you need to extend to the "violet" colours as well.
+            If you extend the configuration to use one of the "{aliasedAwayColours[tailwindBaseColourName]}"
+            colours from the full palette and you also want to use a "{tailwindBaseColourName}"
+            colour, you need to extend to the "{tailwindBaseColourName}" colours
+            as well.
         </p>
     </section>
 {/if}
