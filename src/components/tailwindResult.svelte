@@ -25,6 +25,7 @@
     }
 
     import ColourBlock from "./colourBlock.svelte";
+    import ColourNameResultBox from "./tailwindColourNameResultBox";
 
     const defaultTailwindColours = [
         "black",
@@ -42,13 +43,13 @@
     const defaultTailwindAliases = {
         black: "black",
         white: "white",
-        gray: "coolGray", //
+        gray: "coolGray", // aliased away
         red: "red",
-        yellow: "amber", //
-        green: "emerald", //
+        yellow: "amber", // aliased away
+        green: "emerald", // aliased away
         blue: "blue",
         indigo: "indigo",
-        purple: "violet", //
+        purple: "violet", // aliased away
         pink: "pink",
     };
 
@@ -69,13 +70,25 @@
 </p>
 
 <p>
-    <span class="text-gray-700">Tailwind colour name: </span>
-    <span
-        class="w-48 px-4 py-1 mt-4 mb-2 font-semibold leading-loose underline border shadow border-cyan-500">
-        {tailwindColourVariant}
+    <span class="text-gray-700">
+        {#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
+            Tailwind colour name (full palette):
+        {:else}Tailwind colour name:{/if}
     </span>
+
+    <ColourNameResultBox resultText={tailwindColourVariant} />
 </p>
-<p class="leading-loose text-gray-700 ">
+
+{#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
+    <p>
+        <span class="text-gray-700">Tailwind colour name (default palette):
+        </span>
+        <ColourNameResultBox
+            resultText="{aliasedAwayColours[tailwindBaseColourName]}-{tailwindBaseColourNumber}" />
+    </p>
+{/if}
+
+<p class="leading-loose text-gray-700">
     Hex colour code:
     {tailwindColourValue.toUpperCase()}
 </p>
