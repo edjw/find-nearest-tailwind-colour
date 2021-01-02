@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.3.1",
     "compression": "^1.7.1",
     "nearest-color": "^0.4.4",
     "polka": "next",
