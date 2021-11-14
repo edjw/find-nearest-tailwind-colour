@@ -16,13 +16,13 @@
     "serve": "serve ___sapper__/export"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/typography": "^0.3.1",
+    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "^0.4.1",
     "compression": "^1.7.4",
     "nearest-color": "^0.4.4",
     "polka": "next",
     "sirv": "^1.0.10",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
