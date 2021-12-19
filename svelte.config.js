@@ -1,5 +1,20 @@
-import autoProcess from "svelte-preprocess";
+import preprocess from "svelte-preprocess";
+import adapter from "@sveltejs/adapter-auto";
 
-const preprocess = autoProcess({ postcss: true });
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  kit: {
+    adapter: adapter(),
 
-export { preprocess };
+    // hydrate the <div id="svelte"> element in src/app.html
+    target: "#svelte",
+  },
+
+  preprocess: [
+    preprocess({
+      postcss: true,
+    }),
+  ],
+};
+
+export default config;
