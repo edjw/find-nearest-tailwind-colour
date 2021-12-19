@@ -16,9 +16,16 @@
 	<p class="mt-2 text-cyan-100">
 		A tool to find the nearest colour from
 		<a href="https://tailwindcss.com/docs/customizing-colors">
-			the Tailwind colour palette</a>
+			the Tailwind colour palette</a
+		>
 	</p>
-	<p class="mt-2 text-cyan-100 text-sm" style="">Currently using v2 of Tailwind. Soon to be updated.</p>
+	<p class="mt-2 text-cyan-100 text-sm">
+		Currently using v2 of Tailwind. <a
+			href="https://v3--find-nearest-tailwind-colour.netlify.app"
+		>
+			Check the beta covering v3
+		</a>
+	</p>
 </header>
 
 <main>
@@ -34,13 +41,15 @@
 </main>
 
 <footer
-	class="p-4 mt-8 -ml-4 -mr-4 sm:rounded text-cyan-50 bg-cyan-800 border-top-4">
+	class="p-4 mt-8 -ml-4 -mr-4 sm:rounded text-cyan-50 bg-cyan-800 border-top-4"
+>
 	<p class="mt-0">
 		Made by
 		<a href="https://twitter.com/_edjw">Ed Johnson-Williams</a>
 	</p>
 	<p>
-		<a href="https://github.com/edjw/find-nearest-tailwind-colour">See the
-			code for this website</a>
+		<a href="https://github.com/edjw/find-nearest-tailwind-colour"
+			>See the code for this website</a
+		>
 	</p>
 </footer>
