@@ -18,6 +18,7 @@
 		<a href="https://tailwindcss.com/docs/customizing-colors">
 			the Tailwind colour palette</a>
 	</p>
+	<p class="mt-2 text-cyan-100 text-sm" style="">Currently using v2 of Tailwind. Soon to be updated.</p>
 </header>
 
 <main>
