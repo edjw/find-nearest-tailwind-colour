@@ -5,3 +5,8 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "same-origin"
+
+[build]
+  command = "npm run build"
+  publish = "build/"
+  functions = "functions/"
