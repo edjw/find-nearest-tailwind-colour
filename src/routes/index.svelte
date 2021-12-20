@@ -47,7 +47,7 @@
 >
   <p class="mt-0">
     Made by
-    <a href="https://twitter.com/_edjw">Ed Johnson-Williams</a>
+    <a href="https://edjohnsonwilliams.co.uk">Ed Johnson-Williams</a>
   </p>
   <p>
     <a href="https://github.com/edjw/find-nearest-tailwind-colour"
