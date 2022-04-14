@@ -4,6 +4,11 @@
 
 <https://find-nearest-tailwind-colour.netlify.app>
 
+A beta for v3 of Tailwind is here:
+<https://github.com/edjw/find-nearest-tailwind-colour/tree/v3>
+
+<https://v3--find-nearest-tailwind-colour.netlify.app/>
+
 ## Running the project
 
 Run the project in development mode:
