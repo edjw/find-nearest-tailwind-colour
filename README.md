@@ -4,8 +4,6 @@
 
 <https://v3--find-nearest-tailwind-colour.netlify.app/>
 
-This is a beta version to cover v3 of Tailwind CSS.
-
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
