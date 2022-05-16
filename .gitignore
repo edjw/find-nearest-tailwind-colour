@@ -1,3 +1,11 @@
 .DS_Store
 node_modules
-/__sapper__/
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+/functions
+.netlify
+.gitpod.yml

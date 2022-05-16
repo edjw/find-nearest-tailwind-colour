@@ -27,38 +27,38 @@
     import ColourBlock from "./colourBlock.svelte";
     import ColourNameResultBox from "./tailwindColourNameResultBox.svelte";
 
-    const defaultTailwindColours = [
-        "black",
-        "white",
-        "coolGray", // Aliased to gray
-        "red",
-        "amber", // Aliased to yellow
-        "emerald", // Aliased to green
-        "blue",
-        "indigo",
-        "violet", // Aliased to purple
-        "pink",
-    ];
+    // const defaultTailwindColours = [
+    //     "black",
+    //     "white",
+    //     "coolGray", // Aliased to gray
+    //     "red",
+    //     "amber", // Aliased to yellow
+    //     "emerald", // Aliased to green
+    //     "blue",
+    //     "indigo",
+    //     "violet", // Aliased to purple
+    //     "pink",
+    // ];
 
-    const defaultTailwindAliases = {
-        black: "black",
-        white: "white",
-        gray: "coolGray", // aliased away
-        red: "red",
-        yellow: "amber", // aliased away
-        green: "emerald", // aliased away
-        blue: "blue",
-        indigo: "indigo",
-        purple: "violet", // aliased away
-        pink: "pink",
-    };
+    // const defaultTailwindAliases = {
+    //     black: "black",
+    //     white: "white",
+    //     gray: "coolGray", // aliased away
+    //     red: "red",
+    //     yellow: "amber", // aliased away
+    //     green: "emerald", // aliased away
+    //     blue: "blue",
+    //     indigo: "indigo",
+    //     purple: "violet", // aliased away
+    //     pink: "pink",
+    // };
 
-    const aliasedAwayColours = {
-        coolGray: "gray",
-        amber: "yellow",
-        emerald: "green",
-        violet: "purple",
-    };
+    // const aliasedAwayColours = {
+    //     coolGray: "gray",
+    //     amber: "yellow",
+    //     emerald: "green",
+    //     violet: "purple",
+    // };
 </script>
 
 <p class="font-semibold">Nearest Tailwind Colour</p>
@@ -71,22 +71,27 @@
 
 <p>
     <span class="text-gray-700">
-        {#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
+        <!-- {#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
             Tailwind colour name (full palette):
-        {:else}Tailwind colour name:{/if}
+        {:else}Tailwind colour name:{/if} -->
+        Tailwind colour name:
     </span>
 
     <ColourNameResultBox resultText={tailwindColourVariant} />
 </p>
 
-{#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
+<!-- {#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
     <p>
-        <span class="text-gray-700">Tailwind colour name (default palette):
+        <span class="text-gray-700"
+            >Tailwind colour name (default palette):
         </span>
         <ColourNameResultBox
-            resultText="{aliasedAwayColours[tailwindBaseColourName]}-{tailwindBaseColourNumber}" />
+            resultText="{aliasedAwayColours[
+                tailwindBaseColourName
+            ]}-{tailwindBaseColourNumber}"
+        />
     </p>
-{/if}
+{/if} -->
 
 <p class="leading-loose text-gray-700">
     Hex colour code:
@@ -99,7 +104,7 @@
     <ColourBlock backgroundColourHexCode={tailwindColourValue} />
 </div>
 
-{#if defaultTailwindAliases[tailwindBaseColourName] && defaultTailwindAliases[tailwindBaseColourName] !== tailwindBaseColourName}
+<!-- {#if defaultTailwindAliases[tailwindBaseColourName] && defaultTailwindAliases[tailwindBaseColourName] !== tailwindBaseColourName}
     <section class="mt-6">
         <p class="font-semibold">Alias clash</p>
         <p class="mt-0">
@@ -108,13 +113,16 @@
             colours. Using
             <code>{tailwindColourVariant}</code>
             will actually result in
-            <code>{defaultTailwindAliases[tailwindBaseColourName]}-{tailwindBaseColourNumber}</code>,
-            unless you extend your Tailwind config file as explained below.
+            <code
+                >{defaultTailwindAliases[
+                    tailwindBaseColourName
+                ]}-{tailwindBaseColourNumber}</code
+            >, unless you extend your Tailwind config file as explained below.
         </p>
     </section>
-{/if}
+{/if} -->
 
-{#if defaultTailwindColours.includes(tailwindBaseColourName) === false}
+<!-- {#if defaultTailwindColours.includes(tailwindBaseColourName) === false}
     <section class="mt-6">
         <p class="font-semibold">Non-default colour</p>
         <p class="mt-0">
@@ -128,8 +136,7 @@
 
         <div class="mt-4 overflow-hidden prose">
             <pre class="language-js">
-                <code
-                    class="language-js">
+                <code class="language-js">
 const colors = require(&quot;tailwindcss/colors&quot;)&semi;
 module&period;exports &equals; &lcub;
   theme&colon; &lcub;
@@ -144,9 +151,9 @@ module&period;exports &equals; &lcub;
 </pre>
         </div>
     </section>
-{/if}
+{/if} -->
 
-{#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
+<!-- {#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
     <section class="mt-6">
         <p class="font-semibold">
             Available in default config under a different name
@@ -160,16 +167,21 @@ module&period;exports &equals; &lcub;
             configuration uses "{aliasedAwayColours[tailwindBaseColourName]}" as
             an alias for "{tailwindBaseColourName}". So, in a zero-config setup,
             you can actually use
-            <code>{aliasedAwayColours[tailwindBaseColourName]}-{tailwindBaseColourNumber}</code>
+            <code
+                >{aliasedAwayColours[
+                    tailwindBaseColourName
+                ]}-{tailwindBaseColourNumber}</code
+            >
             to get the same colour as
             <code>{tailwindColourVariant}</code>.
         </p>
 
         <p>
-            If you extend the configuration to use one of the "{aliasedAwayColours[tailwindBaseColourName]}"
-            colours from the full palette and you also want to use a "{tailwindBaseColourName}"
+            If you extend the configuration to use one of the "{aliasedAwayColours[
+                tailwindBaseColourName
+            ]}" colours from the full palette and you also want to use a "{tailwindBaseColourName}"
             colour, you need to extend to the "{tailwindBaseColourName}" colours
             as well.
         </p>
     </section>
-{/if}
+{/if} -->

@@ -1,14 +1,14 @@
 <script>
     export let resultText;
 
-    const copyColourNameToClipboard = async (event) => {
+    const copyColourNameToClipboard = async () => {
         if (!navigator.clipboard) {
             // Clipboard API not available
             return;
         }
-        const text = event.target.innerText;
+        
         try {
-            await navigator.clipboard.writeText(text);
+            await navigator.clipboard.writeText(resultText);
         } catch (err) {
             console.error("Failed to copy!", err);
         }

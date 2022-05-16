@@ -1,9 +1,8 @@
-const colors = require("tailwindcss/colors");
-module.exports = {
-  purge: {
-    mode: "all",
-    content: ["./src/**/*.svelte", "./src/**/*.html"],
-  },
+// const colors = require("tailwindcss/colors.js");
+
+const config = {
+  content: ["./src/**/*.{html,js,svelte,ts}"],
+
   theme: {
     extend: {
       gridTemplateColumns: {
@@ -12,11 +11,12 @@ module.exports = {
       gridTemplateRows: {
         "auto-1-auto": "auto 1fr auto",
       },
-      colors: {
-        cyan: colors.cyan,
-      },
+      // colors: {
+      // cyan: colors.cyan,
+      // },
     },
   },
-  variants: {},
   plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };
+
+module.exports = config;

@@ -1,5 +1,20 @@
-import autoProcess from "svelte-preprocess";
+import preprocess from "svelte-preprocess";
+import adapter from "@sveltejs/adapter-static";
 
-const preprocess = autoProcess({ postcss: true });
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  kit: {
+    adapter: adapter(),
+    prerender: {
+      default: true
+    }
+  },
 
-export { preprocess };
+  preprocess: [
+    preprocess({
+      postcss: true,
+    }),
+  ],
+};
+
+export default config;

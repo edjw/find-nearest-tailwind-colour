@@ -2,36 +2,25 @@
 
 [Find the nearest Tailwind colour](https://find-nearest-tailwind-colour.netlify.app) is a web app to help you find the nearest colour from [the full Tailwind CSS colour palette](https://tailwindcss.com/docs/customizing-colors).
 
-<https://find-nearest-tailwind-colour.netlify.app>
-
-A beta for v3 of Tailwind is here:
-<https://github.com/edjw/find-nearest-tailwind-colour/tree/v3>
-
 <https://v3--find-nearest-tailwind-colour.netlify.app/>
 
-## Running the project
+## Developing
 
-Run the project in development mode:
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
-git clone https://github.com/edjw/find-nearest-tailwind-colour.git
-
-cd find-nearest-tailwind-colour
-
-npm install 
-
 npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-This will start the development server on [localhost:3000](http://localhost:3000).
+## Building
 
-## Production mode and deployment
-
-To start a production version of your app that runs on Node, run `npm run build && npm start`. This will disable live reloading, and activate the appropriate bundler plugins.
-
-To create a static version of the site for Netlify/Vercel, run `npm run export`. That's what is running at <https://find-nearest-tailwind-colour.netlify.app>
+```bash
+npm run build
+```
 
 ## Thanks and credit
 
 Thanks to [Daniel Tao for his `nearest-color` package](https://github.com/dtao/nearest-color) that has the algorithm to find the nearest colour.
-
