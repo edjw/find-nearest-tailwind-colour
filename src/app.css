@@ -4,15 +4,15 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-2xl;
-  }
+	h1 {
+		@apply text-2xl;
+	}
 
-  a {
-    @apply underline;
-  }
+	a {
+		@apply underline;
+	}
 
-  p {
-    @apply mt-4;
-  }
+	p {
+		@apply mt-4;
+	}
 }

@@ -1,83 +1,80 @@
 <script>
-    import { isValidColour } from "../scripts/isValidColour";
-    import { tailwindColours } from "../scripts/tailwindColours";
-    import * as nearestColour from "nearest-color";
-    const getNearestTailwindColour = nearestColour.from(tailwindColours);
+	import { isValidColour } from '../scripts/isValidColour';
+	import { tailwindColours } from '../scripts/tailwindColours';
+	import * as nearestColour from 'nearest-color';
+	const getNearestTailwindColour = nearestColour.from(tailwindColours);
 
-    import { colour as userColour } from "../scripts/colourStore";
+	import { colour as userColour } from '../scripts/colourStore';
 
-    let nearestTailwindColour = null; // Object from nearest-color
+	let nearestTailwindColour = null; // Object from nearest-color
 
-    let tailwindColourVariant = null; // orange-200
-    let tailwindColourValue = null; // #FED7AA
-    let tailwindBaseColourName = null; // orange
-    let tailwindBaseColourNumber = null; // 200
+	let tailwindColourVariant = null; // orange-200
+	let tailwindColourValue = null; // #FED7AA
+	let tailwindBaseColourName = null; // orange
+	let tailwindBaseColourNumber = null; // 200
 
-    $: if ($userColour != null && isValidColour($userColour)) {
-        nearestTailwindColour = getNearestTailwindColour($userColour);
-        tailwindColourVariant = nearestTailwindColour["name"];
-        tailwindColourValue = nearestTailwindColour["value"];
-        tailwindBaseColourName = tailwindColourVariant.replace(
-            /-\d{2,3}$/gi,
-            ""
-        );
-        tailwindBaseColourNumber = tailwindColourVariant.replace(/^\w+-/gi, "");
-    }
+	$: if ($userColour != null && isValidColour($userColour)) {
+		nearestTailwindColour = getNearestTailwindColour($userColour);
+		tailwindColourVariant = nearestTailwindColour['name'];
+		tailwindColourValue = nearestTailwindColour['value'];
+		tailwindBaseColourName = tailwindColourVariant.replace(/-\d{2,3}$/gi, '');
+		tailwindBaseColourNumber = tailwindColourVariant.replace(/^\w+-/gi, '');
+	}
 
-    import ColourBlock from "./colourBlock.svelte";
-    import ColourNameResultBox from "./tailwindColourNameResultBox.svelte";
+	import ColourBlock from './colourBlock.svelte';
+	import ColourNameResultBox from './tailwindColourNameResultBox.svelte';
 
-    // const defaultTailwindColours = [
-    //     "black",
-    //     "white",
-    //     "coolGray", // Aliased to gray
-    //     "red",
-    //     "amber", // Aliased to yellow
-    //     "emerald", // Aliased to green
-    //     "blue",
-    //     "indigo",
-    //     "violet", // Aliased to purple
-    //     "pink",
-    // ];
+	// const defaultTailwindColours = [
+	//     "black",
+	//     "white",
+	//     "coolGray", // Aliased to gray
+	//     "red",
+	//     "amber", // Aliased to yellow
+	//     "emerald", // Aliased to green
+	//     "blue",
+	//     "indigo",
+	//     "violet", // Aliased to purple
+	//     "pink",
+	// ];
 
-    // const defaultTailwindAliases = {
-    //     black: "black",
-    //     white: "white",
-    //     gray: "coolGray", // aliased away
-    //     red: "red",
-    //     yellow: "amber", // aliased away
-    //     green: "emerald", // aliased away
-    //     blue: "blue",
-    //     indigo: "indigo",
-    //     purple: "violet", // aliased away
-    //     pink: "pink",
-    // };
+	// const defaultTailwindAliases = {
+	//     black: "black",
+	//     white: "white",
+	//     gray: "coolGray", // aliased away
+	//     red: "red",
+	//     yellow: "amber", // aliased away
+	//     green: "emerald", // aliased away
+	//     blue: "blue",
+	//     indigo: "indigo",
+	//     purple: "violet", // aliased away
+	//     pink: "pink",
+	// };
 
-    // const aliasedAwayColours = {
-    //     coolGray: "gray",
-    //     amber: "yellow",
-    //     emerald: "green",
-    //     violet: "purple",
-    // };
+	// const aliasedAwayColours = {
+	//     coolGray: "gray",
+	//     amber: "yellow",
+	//     emerald: "green",
+	//     violet: "purple",
+	// };
 </script>
 
 <p class="font-semibold">Nearest Tailwind Colour</p>
 
 <p class="mt-0 text-gray-700">
-    Here's the nearest colour to
-    <code>{$userColour.toUpperCase()}</code>
-    in Tailwind's full colour palette.
+	Here's the nearest colour to
+	<code>{$userColour.toUpperCase()}</code>
+	in Tailwind's full colour palette.
 </p>
 
 <p>
-    <span class="text-gray-700">
-        <!-- {#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
+	<span class="text-gray-700">
+		<!-- {#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
             Tailwind colour name (full palette):
         {:else}Tailwind colour name:{/if} -->
-        Tailwind colour name:
-    </span>
+		Tailwind colour name:
+	</span>
 
-    <ColourNameResultBox resultText={tailwindColourVariant} />
+	<ColourNameResultBox resultText={tailwindColourVariant} />
 </p>
 
 <!-- {#if aliasedAwayColours.hasOwnProperty(tailwindBaseColourName)}
@@ -94,14 +91,14 @@
 {/if} -->
 
 <p class="leading-loose text-gray-700">
-    Hex colour code:
-    {tailwindColourValue.toUpperCase()}
+	Hex colour code:
+	{tailwindColourValue.toUpperCase()}
 </p>
 
 <p class="text-gray-700">Preview</p>
 
 <div class="w-48 h-20">
-    <ColourBlock backgroundColourHexCode={tailwindColourValue} />
+	<ColourBlock backgroundColourHexCode={tailwindColourValue} />
 </div>
 
 <!-- {#if defaultTailwindAliases[tailwindBaseColourName] && defaultTailwindAliases[tailwindBaseColourName] !== tailwindBaseColourName}

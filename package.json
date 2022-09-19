@@ -1,26 +1,37 @@
 {
-  "name": "find-nearest-tailwind-colour-new",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "package": "vite package",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.39",
-    "@sveltejs/kit": "^1.0.0-next.405",
-    "@tailwindcss/forms": "^0.5.1",
-    "@tailwindcss/typography": "^0.5.2",
-    "autoprefixer": "^10.4.7",
-    "cssnano": "^5.0.8",
-    "nearest-color": "^0.4.4",
-    "postcss": "^8.3.9",
-    "postcss-load-config": "^3.1.0",
-    "svelte": "^3.44.0",
-    "svelte-preprocess": "^4.9.8",
-    "tailwindcss": "latest",
-    "vite": "^3.1.3"
-  },
-  "type": "module"
+	"name": "find-nearest-tailwind-colour",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-static": "^1.0.0-next.43",
+		"@sveltejs/kit": "next",
+		"@tailwindcss/forms": "^0.5.1",
+		"@tailwindcss/typography": "^0.5.2",
+		"autoprefixer": "^10.4.7",
+		"cssnano": "^5.0.8",
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"nearest-color": "^0.4.4",
+		"postcss": "^8.3.9",
+		"postcss-load-config": "^3.1.0",
+		"prettier": "^2.6.2",
+		"prettier-plugin-svelte": "^2.7.0",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.7.1",
+		"svelte-preprocess": "^4.9.8",
+		"tailwindcss": "latest",
+		"typescript": "^4.7.4",
+		"vite": "^3.1.3"
+	},
+	"type": "module"
 }

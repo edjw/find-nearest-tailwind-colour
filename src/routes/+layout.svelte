@@ -1,10 +1,8 @@
 <script>
-  import "../app.css";
-  export const prerender = true;
+	import '../app.css';
+	export const ssr = false;
 </script>
 
-<div
-  class="container grid h-screen px-4 mx-auto max-w-prose grid-cols-full grid-rows-auto-1-auto"
->
-  <slot />
+<div class="container grid h-screen px-4 mx-auto max-w-prose grid-cols-full grid-rows-auto-1-auto">
+	<slot />
 </div>
