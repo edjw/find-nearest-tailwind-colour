@@ -15,7 +15,7 @@
 	<h1 class="leading-none text-cyan-50">Find the nearest Tailwind colour</h1>
 	<p class="mt-2 text-cyan-100">
 		A tool to find the nearest colour from
-		<a href="https://tailwindcss.com/docs/customizing-colors"> the Tailwind colour palette</a>
+		<a href="https://tailwindcss.com/docs/customizing-colors"> the Tailwind v3 colour palette</a>
 	</p>
 </header>
 
