@@ -1,13 +1,14 @@
 import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-netlify';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter({
-			fallback: '200.html'
-		}),
-		prerender: { entries: [] }
+		adapter: adapter(),
+		// adapter: adapter({
+		// 	fallback: '200.html'
+		// }),
+		// prerender: { entries: [] }
 	},
 
 	preprocess: [
