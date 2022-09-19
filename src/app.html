@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta name="theme-color" content="#333333" />
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta name="theme-color" content="#333333">
+		<meta
+			name="description"
+			content="Find the nearest colour from the Tailwind CSS color palette. Enter a hex colour code and get the class name colour for Tailwind CSS."
+		/>
+		<meta property="og:title" content="Find the nearest Tailwind Colour" />
+		<meta
+			property="og:description"
+			content="Find the nearest colour from the Tailwind CSS color palette. Enter a hex colour code and get the closest class name colour for Tailwind CSS for that hexcode."
+		/>
+		<meta
+			property="og:image"
+			content="https://find-nearest-tailwind-colour.netlify.app/social.png"
+		/>
+		<meta property="og:url" content="https://find-nearest-tailwind-colour.netlify.app" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#155e75"> -->
+		<link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
+		<!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+		%sveltekit.head%
+	</head>
 
-	<meta name="description"
-		content="Find the nearest colour from the Tailwind CSS color palette. Enter a hex colour code and get the class name colour for Tailwind CSS." />
-	<meta property="og:title" content="Find the nearest Tailwind Colour" />
-	<meta property="og:description"
-		content="Find the nearest colour from the Tailwind CSS color palette. Enter a hex colour code and get the closest class name colour for Tailwind CSS for that hexcode." />
-	<meta property="og:image" content="https://find-nearest-tailwind-colour.netlify.app/social.png" />
-	<meta property="og:url" content="https://find-nearest-tailwind-colour.netlify.app" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#155e75"> -->
-	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
-	<!-- <link rel="icon" type="image/png" href="favicon.png"> -->
-	%svelte.head%
-</head>
-
-<body>
-	<div id="svelte">%svelte.body%</div>
-</body>
-
+	<body>
+		<div id="svelte">%sveltekit.body%</div>
+	</body>
 </html>
