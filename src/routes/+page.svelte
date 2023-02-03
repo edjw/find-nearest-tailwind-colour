@@ -41,4 +41,5 @@
 			See the code for this website
 		</a>
 	</p>
+	  <p>If you're finding this tool useful, take a look at my text editor with a twist. <a href="https://draft-one.com">Draft One is for focused first drafts</a>.</p>
 </footer>
