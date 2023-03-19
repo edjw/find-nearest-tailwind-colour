@@ -95,10 +95,22 @@
 	{tailwindColourValue.toUpperCase()}
 </p>
 
-<p class="text-gray-700">Preview</p>
+<div class="flex">
+	<div>
+		<p class="text-gray-700">Nearest color</p>
 
-<div class="w-48 h-20">
-	<ColourBlock backgroundColourHexCode={tailwindColourValue} />
+		<div class="w-48 h-20">
+			<ColourBlock backgroundColourHexCode={tailwindColourValue} />
+		</div>
+	</div>
+
+	<div>
+		<p class="text-gray-700">Your color</p>
+
+		<div class="w-48 h-20">
+			<ColourBlock backgroundColourHexCode={$userColour} />
+		</div>
+	</div>
 </div>
 
 <!-- {#if defaultTailwindAliases[tailwindBaseColourName] && defaultTailwindAliases[tailwindBaseColourName] !== tailwindBaseColourName}
