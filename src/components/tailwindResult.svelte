@@ -95,7 +95,7 @@
 	{tailwindColourValue.toUpperCase()}
 </p>
 
-<div class="flex">
+<div class="flex flex-wrap">
 	<div>
 		<p class="text-gray-700">Nearest color</p>
 
