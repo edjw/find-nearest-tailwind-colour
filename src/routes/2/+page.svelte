@@ -1,0 +1,30 @@
+<script>
+	/** @type {import('./$types').PageData} */
+
+	import { isValidColour } from '../../scripts/isValidColour';
+	import Header from '../../components/Header.svelte';
+
+	import ColourInput from '../../components/colourInput.svelte';
+	import TailwindResult from '../../components/tailwindResult.svelte';
+
+	import { colour as userColour } from '../../scripts/colourStore';
+	const tailwindVersion = 'v2';
+</script>
+
+<svelte:head>
+	<title>Find the nearest Tailwind Colour</title>
+</svelte:head>
+
+<Header {tailwindVersion} />
+
+<main>
+	<section class="mt-8">
+		<ColourInput />
+	</section>
+
+	{#if $userColour != null && isValidColour($userColour)}
+		<section class="mt-10">
+			<TailwindResult tailwindVersion="v2" />
+		</section>
+	{/if}
+</main>

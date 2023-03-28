@@ -1,7 +1,22 @@
 <script>
+	export let tailwindVersion; // Can be v3.3+, v3.2 or v2
 	import { isValidColour } from '../scripts/isValidColour';
-	import { tailwindColours } from '../scripts/tailwindColours';
+	import { tailwindColours as v3_3_colours } from '../colourSets/v3-3_colours';
+	import { tailwindColours as v3_2_colours } from '../colourSets/v3-2_colours';
+	import { tailwindColours as v2_colours } from '../colourSets/v2_colours';
+
 	import * as nearestColour from 'nearest-color';
+
+	let tailwindColours = {};
+
+	if (tailwindVersion === 'v3.3+') {
+		tailwindColours = v3_3_colours;
+	} else if (tailwindVersion === 'v3.2') {
+		tailwindColours = v3_2_colours;
+	} else if (tailwindVersion === 'v2') {
+		tailwindColours = v2_colours;
+	}
+
 	const getNearestTailwindColour = nearestColour.from(tailwindColours);
 
 	import { colour as userColour } from '../scripts/colourStore';
@@ -21,7 +36,7 @@
 	import ColourNameResultBox from './tailwindColourNameResultBox.svelte';
 </script>
 
-<p class="font-semibold">Nearest Tailwind Colour</p>
+<p class="font-semibold">Nearest Tailwind Colour in {tailwindVersion}</p>
 
 <p class="mt-0 text-gray-700">
 	Here's the nearest colour to
