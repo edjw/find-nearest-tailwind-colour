@@ -19,7 +19,7 @@
 
 <main>
 	<section class="mt-8">
-		<ColourInput />
+		<ColourInput {tailwindVersion} />
 	</section>
 
 	{#if $userColour != null && isValidColour($userColour)}

@@ -1,9 +1,10 @@
 <script>
+	export let tailwindVersion = ''; // Can be v3.3+, v3.2 or v2
 	import { colour as userColour } from '../scripts/colourStore';
 </script>
 
 <section class="mt-2">
-	<p class="font-semibold">Enter a colour, get a Tailwind colour name</p>
+	<p class="font-semibold">Enter a colour, get a Tailwind {tailwindVersion} colour name</p>
 
 	<label class="block mt-0 text-gray-700">
 		Type a hex colour code like
