@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-	<title>Find the nearest Tailwind Colour</title>
+	<title>Find the nearest Tailwind {tailwindVersion} Colour</title>
 </svelte:head>
 
 <Header {tailwindVersion} />
