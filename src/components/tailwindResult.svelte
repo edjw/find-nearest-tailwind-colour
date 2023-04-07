@@ -60,7 +60,7 @@
 
 	<div>
 		<p class="text-gray-700 font-semibold">Preview</p>
-		<div class="flex flex-wrap mt-2 gap-x-6">
+		<div class="flex flex-col sm:flex-row mt-2 gap-x-6 gap-y-4">
 			<div>
 				<p class="text-gray-700 mt-0">
 					Tailwind's <span class="italic">{tailwindColourVariant}</span>
