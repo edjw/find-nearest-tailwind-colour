@@ -37,22 +37,26 @@
 	<div class="mt-4 text-cyan-100">
 		<details class="select-none">
 			<summary class="cursor-pointer ">Switch Tailwind version</summary>
-			<div class="mt-2">
-				<a href="/" class:active={$page.url.pathname === '/'} class="no-underline hover:underline"
-					>Tailwind v3.3+</a
+			<div class="flex flex-col sm:flex-row mt-2 gap-y-2 gap-x-4 sm:items-center justify-start">
+				<a
+					href="/"
+					class:active={$page.url.pathname === '/'}
+					class="no-underline hover:underline w-fit px-2">Tailwind v3.3+</a
 				>
-				|
+
 				<a
 					href="/3-2"
 					class:active={$page.url.pathname === '/3-2'}
-					class="no-underline hover:underline">Tailwind v3.0-3.2</a
+					class="no-underline hover:underline w-fit px-2">Tailwind v3.0-3.2</a
 				>
-				|
-				<a href="/2" class:active={$page.url.pathname === '/2'} class="no-underline hover:underline"
-					>Tailwind v2</a
+
+				<a
+					href="/2"
+					class:active={$page.url.pathname === '/2'}
+					class="no-underline hover:underline w-fit px-2">Tailwind v2</a
 				>
-				|
-				<button on:click={() => dialog.showModal()}>What?</button>
+
+				<div class="px-2"><button on:click={() => dialog.showModal()}>What?</button></div>
 			</div>
 		</details>
 	</div>
