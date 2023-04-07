@@ -36,27 +36,46 @@
 	import ColourNameResultBox from './tailwindColourNameResultBox.svelte';
 </script>
 
-<p class="font-semibold">Nearest Tailwind Colour in {tailwindVersion}</p>
+<div class="flex flex-col gap-y-6">
+	<div>
+		<p class="font-semibold">
+			Nearest Tailwind Colour {tailwindVersion !== 'v3.3+' ? ` in ${tailwindVersion}` : ''}
+		</p>
 
-<p class="mt-0 text-gray-700">
-	Here's the nearest colour to
-	<code>{$userColour.toUpperCase()}</code>
-	in Tailwind's full colour palette.
-</p>
+		<p class="mt-0 text-gray-700">
+			Here's the nearest colour to
+			<code>{$userColour.toUpperCase()}</code>
+			in {tailwindVersion !== 'v3.3+' ? `Tailwind ${tailwindVersion}` : 'Tailwind'}'s full colour
+			palette.
+		</p>
 
-<p>
-	<span class="text-gray-700"> Tailwind colour name: </span>
+		<p class="text-gray-700">Tailwind colour name:</p>
+		<ColourNameResultBox resultText={tailwindColourVariant} />
 
-	<ColourNameResultBox resultText={tailwindColourVariant} />
-</p>
+		<p class="text-gray-700 mt-0">
+			Hex colour code:
+			{tailwindColourValue.toUpperCase()}
+		</p>
+	</div>
 
-<p class="leading-loose text-gray-700">
-	Hex colour code:
-	{tailwindColourValue.toUpperCase()}
-</p>
+	<div>
+		<p class="text-gray-700 font-semibold">Preview</p>
+		<div class="flex flex-wrap mt-2 gap-x-6">
+			<div>
+				<p class="text-gray-700 mt-0">
+					Tailwind's <span class="italic">{tailwindColourVariant}</span>
+				</p>
+				<div class="w-48 h-20">
+					<ColourBlock backgroundColourHexCode={tailwindColourValue} />
+				</div>
+			</div>
 
-<p class="text-gray-700">Preview</p>
-
-<div class="w-48 h-20">
-	<ColourBlock backgroundColourHexCode={tailwindColourValue} />
+			<div>
+				<p class="text-gray-700 mt-0">Your colour <span class="italic">{$userColour}</span></p>
+				<div class="w-48 h-20">
+					<ColourBlock backgroundColourHexCode={$userColour} />
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
