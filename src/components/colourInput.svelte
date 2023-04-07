@@ -1,6 +1,6 @@
 <script>
 	export let tailwindVersion = ''; // Can be v3.3+, v3.2 or v2
-	import { colour as userColour } from '../scripts/colourStore';
+	import { colour as userColour } from '$/scripts/colourStore';
 </script>
 
 <section class="mt-2">

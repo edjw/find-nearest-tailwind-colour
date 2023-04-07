@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 
-	import TailwindVersionHelp from './TailwindVersionHelp.svelte';
+	import TailwindVersionHelp from '$/components/TailwindVersionHelp.svelte';
 	export let tailwindVersion = ''; // Can be v3.3+, v3.2 or v2
 
 	let dialog;

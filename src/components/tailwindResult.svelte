@@ -1,9 +1,9 @@
 <script>
 	export let tailwindVersion; // Can be v3.3+, v3.2 or v2
-	import { isValidColour } from '../scripts/isValidColour';
-	import { tailwindColours as v3_3_colours } from '../colourSets/v3-3_colours';
-	import { tailwindColours as v3_2_colours } from '../colourSets/v3-2_colours';
-	import { tailwindColours as v2_colours } from '../colourSets/v2_colours';
+	import { isValidColour } from '$/scripts/isValidColour';
+	import { tailwindColours as v3_3_colours } from '$/colourSets/v3-3_colours';
+	import { tailwindColours as v3_2_colours } from '$/colourSets/v3-2_colours';
+	import { tailwindColours as v2_colours } from '$/colourSets/v2_colours';
 
 	import * as nearestColour from 'nearest-color';
 
@@ -19,7 +19,7 @@
 
 	const getNearestTailwindColour = nearestColour.from(tailwindColours);
 
-	import { colour as userColour } from '../scripts/colourStore';
+	import { colour as userColour } from '$/scripts/colourStore';
 
 	let nearestTailwindColour = null; // Object from nearest-color
 
@@ -32,8 +32,8 @@
 		tailwindColourValue = nearestTailwindColour['value'];
 	}
 
-	import ColourBlock from './colourBlock.svelte';
-	import ColourNameResultBox from './tailwindColourNameResultBox.svelte';
+	import ColourBlock from '$/components/colourBlock.svelte';
+	import ColourNameResultBox from '$/components/tailwindColourNameResultBox.svelte';
 </script>
 
 <div class="flex flex-col gap-y-6">
