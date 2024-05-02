@@ -11,7 +11,7 @@
 		×
 	</button>
 	<div class="p-12">
-		<p>Tailwind has 3 different versions of its colour palette.</p>
+		<p>Tailwind has had 3 different versions of its colour palette.</p>
 		<p>
 			So the closest Tailwind colour to your hexcode <em>may</em> vary depending on which version of
 			Tailwind you're using.
