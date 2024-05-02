@@ -1,9 +1,8 @@
 <script>
 	import '$/app.css';
-	export const ssr = false;
 </script>
 
-<div class="container grid h-screen px-4 mx-auto max-w-prose grid-cols-full grid-rows-auto-1-auto">
+<div class="container grid h-screen px-4 mx-auto max-w-prose grid-cols-1 grid-rows-[auto_1fr_auto]">
 	<slot />
 	<footer class="p-4 mt-8 -ml-4 -mr-4 sm:rounded text-cyan-50 bg-cyan-800 border-top-4">
 		<p class="mt-0">
