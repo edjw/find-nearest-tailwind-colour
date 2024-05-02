@@ -2,7 +2,7 @@
 	export let dialog;
 </script>
 
-<dialog class="md:w-1/2" bind:this={dialog} on:close on:click={() => dialog.close()}>
+<dialog class="md:w-1/2 rounded-lg" bind:this={dialog} on:close on:click={() => dialog.close()}>
 	<button
 		class="absolute top-2 right-2 px-2 font-bold border"
 		on:click={() => dialog.close()}
@@ -10,7 +10,7 @@
 	>
 		×
 	</button>
-	<div class="mt-6 mr-2 md:mr-6">
+	<div class="p-12">
 		<p>Tailwind has 3 different versions of its colour palette.</p>
 		<p>
 			So the closest Tailwind colour to your hexcode <em>may</em> vary depending on which version of
