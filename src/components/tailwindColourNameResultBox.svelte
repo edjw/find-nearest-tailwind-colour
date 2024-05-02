@@ -10,7 +10,7 @@
 		try {
 			await navigator.clipboard.writeText(resultText);
 		} catch (err) {
-			console.error('Failed to copy!', err);
+			console.error("Failed to copy!", err);
 		}
 	};
 </script>
@@ -20,7 +20,7 @@
 	title="Click to copy"
 	on:click={copyColourNameToClipboard}
 >
-	<span class="font-semibold leading-loose underline ">
+	<span class="font-semibold leading-loose underline">
 		{resultText}
 	</span>
 	<svg

@@ -1,25 +1,25 @@
 <script>
 	export let tailwindVersion; // Can be v3.3+, v3.2 or v2
-	import { isValidColour } from '$/scripts/isValidColour';
-	import { tailwindColours as v3_3_colours } from '$/colourSets/v3-3_colours';
-	import { tailwindColours as v3_2_colours } from '$/colourSets/v3-2_colours';
-	import { tailwindColours as v2_colours } from '$/colourSets/v2_colours';
+	import { isValidColour } from "$/scripts/isValidColour";
+	import { tailwindColours as v3_3_colours } from "$/colourSets/v3-3_colours";
+	import { tailwindColours as v3_2_colours } from "$/colourSets/v3-2_colours";
+	import { tailwindColours as v2_colours } from "$/colourSets/v2_colours";
 
-	import * as nearestColour from 'nearest-color';
+	import * as nearestColour from "nearest-color";
 
 	let tailwindColours = {};
 
-	if (tailwindVersion === 'v3.3+') {
+	if (tailwindVersion === "v3.3+") {
 		tailwindColours = v3_3_colours;
-	} else if (tailwindVersion === 'v3.2') {
+	} else if (tailwindVersion === "v3.2") {
 		tailwindColours = v3_2_colours;
-	} else if (tailwindVersion === 'v2') {
+	} else if (tailwindVersion === "v2") {
 		tailwindColours = v2_colours;
 	}
 
 	const getNearestTailwindColour = nearestColour.from(tailwindColours);
 
-	import { colour as userColour } from '$/scripts/colourStore';
+	import { colour as userColour } from "$/scripts/colourStore";
 
 	let nearestTailwindColour = null; // Object from nearest-color
 
@@ -28,25 +28,27 @@
 
 	$: if ($userColour != null && isValidColour($userColour)) {
 		nearestTailwindColour = getNearestTailwindColour($userColour);
-		tailwindColourVariant = nearestTailwindColour['name'];
-		tailwindColourValue = nearestTailwindColour['value'];
+		tailwindColourVariant = nearestTailwindColour["name"];
+		tailwindColourValue = nearestTailwindColour["value"];
 	}
 
-	import ColourBlock from '$/components/colourBlock.svelte';
-	import ColourNameResultBox from '$/components/tailwindColourNameResultBox.svelte';
+	import ColourBlock from "$/components/colourBlock.svelte";
+	import ColourNameResultBox from "$/components/tailwindColourNameResultBox.svelte";
 </script>
 
 <div class="flex flex-col gap-y-6">
 	<div>
 		<p class="font-semibold">
-			Nearest Tailwind Colour {tailwindVersion !== 'v3.3+' ? ` in ${tailwindVersion}` : ''}
+			Nearest Tailwind Colour {tailwindVersion !== "v3.3+" ? ` in ${tailwindVersion}` : ""}
 		</p>
 
 		<p class="mt-0 text-gray-700">
-			Here's the nearest colour to
+			Here"s the nearest colour to
 			<code>{$userColour.toUpperCase()}</code>
-			in {tailwindVersion !== 'v3.3+' ? `Tailwind ${tailwindVersion}` : 'Tailwind'}'s full colour
-			palette.
+			in {tailwindVersion !== "v3.3+"
+				? `Tailwind ${tailwindVersion}`
+				: `Tailwind's full colour
+			palette.`}
 		</p>
 
 		<p class="text-gray-700">Tailwind colour name:</p>
@@ -63,7 +65,7 @@
 		<div class="flex flex-col sm:flex-row mt-2 gap-x-6 gap-y-4">
 			<div>
 				<p class="text-gray-700 mt-0">
-					Tailwind's <span class="italic">{tailwindColourVariant}</span>
+					Tailwind"s <span class="italic">{tailwindColourVariant}</span>
 				</p>
 				<div class="w-48 h-20">
 					<ColourBlock backgroundColourHexCode={tailwindColourValue} />

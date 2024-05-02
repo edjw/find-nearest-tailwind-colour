@@ -1,5 +1,5 @@
 <script>
-	import '$/app.css';
+	import "$/app.css";
 </script>
 
 <div class="container grid h-screen px-4 mx-auto max-w-prose grid-cols-1 grid-rows-[auto_1fr_auto]">

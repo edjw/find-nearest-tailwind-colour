@@ -1,14 +1,14 @@
 <script>
-	/** @type {import('./$types').PageData} */
+	/** @type {import("./$types").PageData} */
 
-	import { isValidColour } from '$/scripts/isValidColour';
-	import Header from '$/components/Header.svelte';
+	import { isValidColour } from "$/scripts/isValidColour";
+	import Header from "$/components/Header.svelte";
 
-	import ColourInput from '$/components/colourInput.svelte';
-	import TailwindResult from '$/components/tailwindResult.svelte';
+	import ColourInput from "$/components/colourInput.svelte";
+	import TailwindResult from "$/components/tailwindResult.svelte";
 
-	import { colour as userColour } from '$/scripts/colourStore';
-	const tailwindVersion = 'v2';
+	import { colour as userColour } from "$/scripts/colourStore";
+	const tailwindVersion = "v2";
 </script>
 
 <svelte:head>
