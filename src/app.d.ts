@@ -8,4 +8,4 @@ declare namespace App {
 	// interface Platform {}
 }
 
-declare module 'nearest-color';
+declare module "nearest-color";

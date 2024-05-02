@@ -1,5 +1,5 @@
-import { writable } from 'svelte/store';
+import { writable } from "svelte/store";
 
-const colour = writable('');
+const colour = writable("");
 
 export { colour };

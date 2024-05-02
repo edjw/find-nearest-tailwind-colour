@@ -1,7 +1,7 @@
 const config = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ["./src/**/*.{html,js,svelte,ts}"],
 	theme: {},
-	plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')]
+	plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")]
 };
 
 export default config;

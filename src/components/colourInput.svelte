@@ -1,11 +1,11 @@
 <script>
-	export let tailwindVersion = ''; // Can be v3.3+, v3.2 or v2
-	import { colour as userColour } from '$/scripts/colourStore';
+	export let tailwindVersion = ""; // Can be v3.3+, v3.2 or v2
+	import { colour as userColour } from "$/scripts/colourStore";
 </script>
 
 <section class="mt-2">
 	<p class="font-semibold">
-		Enter a colour, get a Tailwind {tailwindVersion !== 'v3.3+' ? tailwindVersion : ''} colour name
+		Enter a colour, get a Tailwind {tailwindVersion !== "v3.3+" ? tailwindVersion : ""} colour name
 	</p>
 
 	<label class="block mt-0 text-gray-700">
