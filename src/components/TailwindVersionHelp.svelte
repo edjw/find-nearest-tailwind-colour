@@ -1,4 +1,7 @@
 <script>
+	/**
+	 * @type {HTMLDialogElement}
+	 */
 	export let dialog;
 
 	function closeDialog() {

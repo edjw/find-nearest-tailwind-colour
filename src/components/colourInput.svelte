@@ -1,4 +1,7 @@
 <script>
+	/**
+	 * @type {"v3.3+" | "v3.2" | "v2" | ""}
+	 */
 	export let tailwindVersion = ""; // Can be v3.3+, v3.2 or v2
 	import { colour as userColour } from "$/scripts/colourStore";
 </script>

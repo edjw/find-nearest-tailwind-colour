@@ -4,6 +4,9 @@
 	import TailwindVersionHelp from "$/components/TailwindVersionHelp.svelte";
 	export let tailwindVersion = ""; // Can be v3.3+, v3.2 or v2
 
+	/**
+	 * @type {HTMLDialogElement}
+	 */
 	let dialog;
 </script>
 

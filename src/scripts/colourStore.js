@@ -5,6 +5,10 @@ function createColourStore() {
 
 	return {
 		subscribe,
+		/**
+		 * Set the colour value
+		 * @param {string} value - The colour value
+		 */
 		set: (value) => {
 			if (value.startsWith("#")) {
 				set(value);
@@ -12,6 +16,10 @@ function createColourStore() {
 				set("#" + value);
 			}
 		},
+		/**
+		 * Update the colour value
+		 * @param {function} updater - The updater function
+		 */
 		update: (updater) => {
 			update((currentValue) => {
 				const newValue = updater(currentValue);
