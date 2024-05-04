@@ -21,7 +21,7 @@
 		<ColourInput {tailwindVersion} />
 	</section>
 
-	{#if $userColour != null && isValidColour($userColour)}
+	{#if $userColour != null && isValidColour($userColour) && tailwindVersion.length}
 		<section class="mt-10">
 			<TailwindResult {tailwindVersion} />
 		</section>
