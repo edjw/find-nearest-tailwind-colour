@@ -306,11 +306,11 @@ const colours = {
  * @type {Object.<string, string>}
  */
 const tailwindColours = {};
-for (let coloursKey in colours) {
+for (const coloursKey in colours) {
 	if (typeof colours[coloursKey] === "string") {
 		tailwindColours[coloursKey] = colours[coloursKey];
 	} else {
-		for (let nestedKey in colours[coloursKey]) {
+		for (const nestedKey in colours[coloursKey]) {
 			tailwindColours[`${coloursKey}-${nestedKey}`] = colours[coloursKey][nestedKey];
 		}
 	}

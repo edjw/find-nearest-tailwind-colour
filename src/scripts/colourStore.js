@@ -13,7 +13,7 @@ function createColourStore() {
 			if (value.startsWith("#")) {
 				set(value);
 			} else {
-				set("#" + value);
+				set(`#${value}`);
 			}
 		},
 		/**
@@ -25,9 +25,8 @@ function createColourStore() {
 				const newValue = updater(currentValue);
 				if (newValue.startsWith("#")) {
 					return newValue;
-				} else {
-					return "#" + newValue;
 				}
+				return `#${newValue}`;
 			});
 		}
 	};

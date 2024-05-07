@@ -40,8 +40,8 @@
 
 	$: if ($userColour != null && isValidColour($userColour)) {
 		nearestTailwindColour = getNearestTailwindColour($userColour);
-		tailwindColourVariant = nearestTailwindColour["name"];
-		tailwindColourValue = nearestTailwindColour["value"];
+		tailwindColourVariant = nearestTailwindColour.name;
+		tailwindColourValue = nearestTailwindColour.value;
 	}
 
 	import ColourBlock from "$/components/colourBlock.svelte";
@@ -66,16 +66,16 @@
 	<ColourNameResultBox resultText={tailwindColourVariant} />
 
 	{#if tailwindColourValue != null}
-		<p class="text-gray-700 mt-0">
+		<p class="mt-0 text-gray-700">
 			Hex colour code:
 			{tailwindColourValue.toUpperCase()}
 		</p>
 	{/if}
 	<div>
-		<p class="text-gray-700 font-semibold">Preview</p>
-		<div class="flex flex-col sm:flex-row mt-2 gap-x-6 gap-y-4">
+		<p class="font-semibold text-gray-700">Preview</p>
+		<div class="flex flex-col mt-2 sm:flex-row gap-x-6 gap-y-4">
 			<div>
-				<p class="text-gray-700 mt-0">
+				<p class="mt-0 text-gray-700">
 					Tailwind's <span class="italic">{tailwindColourVariant}</span>
 				</p>
 				<div class="w-48 h-20">
@@ -84,6 +84,7 @@
 			</div>
 
 			<div>
+				<p class="mt-0 text-gray-700">
 				<p class="text-gray-700 mt-0">Your colour <span class="italic">{$userColour}</span></p>
 				<div class="w-48 h-20">
 					<ColourBlock backgroundColourHexCode={$userColour} />
