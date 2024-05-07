@@ -68,7 +68,7 @@
 	{#if tailwindColourValue != null}
 		<p class="mt-0 text-gray-700">
 			Hex colour code:
-			{tailwindColourValue.toUpperCase()}
+			<code>{tailwindColourValue.toUpperCase()}</code>
 		</p>
 	{/if}
 	<div>
@@ -85,7 +85,8 @@
 
 			<div>
 				<p class="mt-0 text-gray-700">
-				<p class="text-gray-700 mt-0">Your colour <span class="italic">{$userColour}</span></p>
+					Your colour <span class="italic">{$userColour.toUpperCase()}</span>
+				</p>
 				<div class="w-48 h-20">
 					<ColourBlock backgroundColourHexCode={$userColour} />
 				</div>
