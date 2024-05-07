@@ -1,5 +1,8 @@
 <script>
-	export let tailwindVersion; // Can be v3.3+, v3.2 or v2
+	/**
+	 * @type {"v3.3+" | "v3.2" | "v2"}
+	 */
+	export let tailwindVersion;
 	import { isValidColour } from "$/scripts/isValidColour";
 	import { tailwindColours as v3_3_colours } from "$/colourSets/v3-3_colours";
 	import { tailwindColours as v3_2_colours } from "$/colourSets/v3-2_colours";
@@ -21,10 +24,19 @@
 
 	import { colour as userColour } from "$/scripts/colourStore";
 
-	let nearestTailwindColour = null; // Object from nearest-color
+	let nearestTailwindColour = null;
 
-	let tailwindColourVariant = null; // orange-200
-	let tailwindColourValue = null; // #FED7AA
+	/**
+	 * @type {string | null}
+	 * @example orange-200
+	 */
+	let tailwindColourVariant = null;
+
+	/**
+	 * @type {string | null}
+	 * @example #FED7AA
+	 */
+	let tailwindColourValue = null;
 
 	$: if ($userColour != null && isValidColour($userColour)) {
 		nearestTailwindColour = getNearestTailwindColour($userColour);
@@ -53,11 +65,12 @@
 	<p class="text-gray-700">Tailwind colour name:</p>
 	<ColourNameResultBox resultText={tailwindColourVariant} />
 
-	<p class="text-gray-700 mt-0">
-		Hex colour code:
-		{tailwindColourValue.toUpperCase()}
-	</p>
-
+	{#if tailwindColourValue != null}
+		<p class="text-gray-700 mt-0">
+			Hex colour code:
+			{tailwindColourValue.toUpperCase()}
+		</p>
+	{/if}
 	<div>
 		<p class="text-gray-700 font-semibold">Preview</p>
 		<div class="flex flex-col sm:flex-row mt-2 gap-x-6 gap-y-4">

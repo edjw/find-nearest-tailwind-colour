@@ -1,4 +1,7 @@
 <script>
+	/**
+	 * @type {HTMLDialogElement}
+	 */
 	export let dialog;
 
 	function closeDialog() {
@@ -6,6 +9,7 @@
 	}
 </script>
 
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <dialog
 	class="md:w-1/2 rounded-lg"
 	bind:this={dialog}

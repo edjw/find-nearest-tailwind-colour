@@ -2,6 +2,11 @@
 // https://github.com/tailwindlabs/tailwindcss/commit/b3ed7248c218f4c56834e1114d4070ceb21b51fb
 // https://github.com/tailwindlabs/tailwindcss/blob/b3ed7248c218f4c56834e1114d4070ceb21b51fb/colors.js
 
+/**
+ * @constant
+ * @type {Object.<string | Object, string>}
+ * @default
+ */
 const colours = {
 	black: "#000",
 	white: "#fff",
@@ -274,8 +279,11 @@ const colours = {
 // Borrowed from Zhigang Fang
 // https://github.com/zhigang1992/nearestTailwindColor/blob/master/index.js
 
+/**
+ * @constant
+ * @type {Object.<string, string>}
+ */
 const tailwindColours = {};
-
 for (let coloursKey in colours) {
 	if (typeof colours[coloursKey] === "string") {
 		tailwindColours[coloursKey] = colours[coloursKey];
