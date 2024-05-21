@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      svelte-persisted-store:
+        specifier: ^0.9.4
+        version: 0.9.4(svelte@4.2.15)
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^3.2.0
@@ -1256,6 +1260,12 @@ packages:
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
       svelte: ^3.19.0 || ^4.0.0
+
+  svelte-persisted-store@0.9.4:
+    resolution: {integrity: sha512-Em3cDSsd3fAkQhvNc4+V7ZT86GnIkFrlcKK/oNSHFhF5fbNoavdxvtTZ0pCF2ueG/Oqg5kSbAFxn0rkeICpHUA==}
+    engines: {node: '>=0.14'}
+    peerDependencies:
+      svelte: ^3.48.0 || ^4.0.0 || ^5.0.0-next.0
 
   svelte-preprocess@5.1.4:
     resolution: {integrity: sha512-IvnbQ6D6Ao3Gg6ftiM5tdbR6aAETwjhHV+UKGf5bHGYR69RQvF1ho0JKPcbUON4vy4R7zom13jPjgdOWCQ5hDA==}
@@ -2540,6 +2550,10 @@ snapshots:
       svelte: 4.2.15
 
   svelte-hmr@0.16.0(svelte@4.2.15):
+    dependencies:
+      svelte: 4.2.15
+
+  svelte-persisted-store@0.9.4(svelte@4.2.15):
     dependencies:
       svelte: 4.2.15
 
