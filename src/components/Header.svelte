@@ -21,21 +21,21 @@
 	<TailwindVersionHelp bind:dialog />
 
 	<p class="mt-2 text-cyan-100">
-		A tool to find the nearest colour from
+		A tool to convert a hexcode to the most similar colour from the
 		{#if tailwindVersion === "v3.3+"}
-			<a href="https://tailwindcss.com/docs/customizing-colors"> the Tailwind colour palette</a>
+			<a href="https://tailwindcss.com/docs/customizing-colors"> Tailwind colour palette</a>
 		{/if}
 
 		{#if tailwindVersion === "v3.2"}
 			<a
 				href="https://web.archive.org/web/20230318012140/https://tailwindcss.com/docs/customizing-colors"
 			>
-				the <strong>Tailwind v3.0-3.2</strong> colour palette</a
+			 <strong>Tailwind v3.0-3.2</strong> colour palette</a
 			>
 		{/if}
 		{#if tailwindVersion === "v2"}
 			<a href="https://v2.tailwindcss.com/docs/customizing-colors">
-				the <strong>Tailwind {tailwindVersion}</strong> colour palette</a
+				 <strong>Tailwind {tailwindVersion}</strong> colour palette</a
 			>
 		{/if}
 	</p>
