@@ -11,14 +11,22 @@
 	<footer class="p-4 mt-8 -ml-4 -mr-4 sm:rounded text-cyan-50 bg-cyan-800 border-top-4">
 		<div class="flex flex-col justify-start sm:items-center sm:flex-row gap-x-6 gap-y-4">
 			<p class="mt-0">
-				<em>Nearest Color</em> is an upcoming paid desktop app with
-				<span class="font-medium">more accurate color matching</span> and
-				<span class="font-medium">more color input formats</span>.
 				<a
 					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?footer"
-					class="no-underline transition-colors border-b-2 hover:border-b-cyan-500"
-					>Find out why it's better</a
+					>Nearest Color</a
 				>
+				will be an app that's a better version of this website in every way, including
+				<a
+					class="font-bold"
+					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?footer"
+					>much better color matching</a
+				>
+				and
+				<a
+					class="font-bold"
+					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?footer"
+					>every color input format</a
+				>.
 			</p>
 		</div>
 		<p>

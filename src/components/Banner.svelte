@@ -30,21 +30,36 @@
 
 <div
 	bind:this={banner}
-	class="flex-row items-center justify-between hidden px-8 py-4 mb-4 border gap-x-8 group"
+	class="flex-row items-center justify-between hidden max-w-3xl px-8 py-4 mx-auto mb-4 border border-indigo-500 rounded gap-x-8 group"
 >
-	<div class="flex flex-col justify-start sm:items-center sm:flex-row gap-x-6 gap-y-4">
-		<p class="pl-2 mt-0">
-			<em>Nearest Color</em> is an upcoming paid desktop app with
-			<span class="font-medium">more accurate color matching</span> and
-			<span class="font-medium">more color input formats</span>.
-		</p>
-		<p class="flex-shrink-0 mt-0">
+	<div class="flex flex-col justify-start gap-x-6 gap-y-4 text-balance">
+		<p class="mt-0">
 			<a
 				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?banner"
-				class="px-2 py-2 font-medium no-underline transition-all duration-300 rounded-md outline-dashed outline-transparent hover:bg-cyan-700 hover:text-gray-50 group-hover:outline-gray-900"
-				>Find out why it's better</a
+				class="px-2 py-1 italic font-extrabold text-white transition-all bg-indigo-500 rounded hover:bg-indigo-600 hover:text-gray-50"
+				>Nearest Color</a
 			>
+			will be an app that's a better version of this website in every way, including
+			<a
+				class="font-bold"
+				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?banner"
+				>much better color matching</a
+			>
+			and
+			<a
+				class="font-bold"
+				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?banner"
+				>every color input format</a
+			>.
 		</p>
+
+		<!-- <p class="flex-shrink-0 mt-0">
+			<a
+				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?banner"
+				class="px-2 py-2 font-medium no-underline transition-all duration-300 rounded-md outline-transparent outline bg-cyan-700 text-gray-50 group-hover:outline-gray-900 hover:outline-black hover:bg-cyan-500"
+				>See why it's better</a
+			>
+		</p> -->
 	</div>
 	<button type="button" on:click={hideBanner}
 		><svg
