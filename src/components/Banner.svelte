@@ -40,7 +40,7 @@
 		</p>
 		<p class="flex-shrink-0 mt-0">
 			<a
-				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?banner"
+				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?banner"
 				class="px-2 py-2 font-medium no-underline transition-all duration-300 rounded-md outline-dashed outline-transparent hover:bg-cyan-700 hover:text-gray-50 group-hover:outline-gray-900"
 				>Find out why it's better</a
 			>

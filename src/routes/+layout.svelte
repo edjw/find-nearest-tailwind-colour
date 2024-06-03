@@ -15,7 +15,7 @@
 				<span class="font-medium">more accurate color matching</span> and
 				<span class="font-medium">more color input formats</span>.
 				<a
-					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?footer"
+					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?footer"
 					class="no-underline transition-colors border-b-2 hover:border-b-cyan-500"
 					>Find out why it's better</a
 				>
