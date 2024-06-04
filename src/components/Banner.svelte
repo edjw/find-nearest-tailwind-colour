@@ -35,27 +35,27 @@
 	<div class="flex flex-col justify-start gap-x-6 gap-y-4 text-balance">
 		<p class="mt-0">
 			<a
-				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?banner"
+				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?banner"
 				class="px-2 py-1 italic font-extrabold text-white transition-all bg-indigo-500 rounded hover:bg-indigo-600 hover:text-gray-50"
 				>Nearest Color</a
 			>
 			will be an app that's a better version of this website in every way, including
 			<a
 				class="font-bold"
-				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?banner"
+				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?banner"
 				>much better color matching</a
 			>
 			and
 			<a
 				class="font-bold"
-				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?banner"
+				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?banner"
 				>every color input format</a
 			>.
 		</p>
 
 		<!-- <p class="flex-shrink-0 mt-0">
 			<a
-				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?banner"
+				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?banner"
 				class="px-2 py-2 font-medium no-underline transition-all duration-300 rounded-md outline-transparent outline bg-cyan-700 text-gray-50 group-hover:outline-gray-900 hover:outline-black hover:bg-cyan-500"
 				>See why it's better</a
 			>

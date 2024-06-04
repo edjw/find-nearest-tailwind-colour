@@ -12,19 +12,19 @@
 		<div class="flex flex-col justify-start sm:items-center sm:flex-row gap-x-6 gap-y-4">
 			<p class="mt-0">
 				<a
-					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?footer"
+					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?footer"
 					>Nearest Color</a
 				>
 				will be an app that's a better version of this website in every way, including
 				<a
 					class="font-bold"
-					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?footer"
+					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?footer"
 					>much better color matching</a
 				>
 				and
 				<a
 					class="font-bold"
-					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-color?footer"
+					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?footer"
 					>every color input format</a
 				>.
 			</p>
