@@ -2,6 +2,7 @@
 	import { get } from "svelte/store";
 	import { bannerShownSessionStore, bannerHiddenCountStore } from "../data/bannerStore";
 	import { onMount } from "svelte";
+	import TestFlightLink from "./TestFlightLink.svelte";
 	let banner: HTMLDivElement;
 
 	onMount(() => {
@@ -32,7 +33,7 @@
 	bind:this={banner}
 	class="flex-row items-center justify-between hidden max-w-3xl px-8 py-4 mx-auto mb-4 border border-indigo-500 rounded gap-x-8 group"
 >
-	<div class="flex flex-col justify-start gap-x-6 gap-y-4 text-balance">
+	<div class="flex flex-col justify-start text-balance">
 		<p class="mt-0">
 			<a
 				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?banner"
@@ -53,6 +54,7 @@
 			>.
 		</p>
 
+		<TestFlightLink />
 		<!-- <p class="flex-shrink-0 mt-0">
 			<a
 				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?banner"

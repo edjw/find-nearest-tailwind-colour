@@ -1,6 +1,7 @@
 <script>
 	import "$/app.css";
 	import Banner from "$/components/Banner.svelte";
+	import TestFlightLink from "$/components/TestFlightLink.svelte";
 </script>
 
 <div class="container pt-4 mx-auto">
@@ -29,6 +30,8 @@
 				>.
 			</p>
 		</div>
+		<TestFlightLink />
+
 		<p>
 			Made by
 			<a href="https://edjohnsonwilliams.co.uk"> Ed Johnson-Williams </a>
