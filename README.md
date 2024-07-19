@@ -4,7 +4,7 @@
 
 <https://find-nearest-tailwind-colour.netlify.app>
 
-## Nearest Color Desktop app
+## Nearest Color desktop app
 
 Nearest Color is a desktop app that's a better version of this website in every way, including much better color matching and every color input format. Find out more about [why **Nearest Color** is better than *Find the nearest Tailwind colour*](https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour).
 
