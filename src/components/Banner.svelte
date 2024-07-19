@@ -2,7 +2,7 @@
 	import { get } from "svelte/store";
 	import { bannerShownSessionStore, bannerHiddenCountStore } from "../data/bannerStore";
 	import { onMount } from "svelte";
-	import TestFlightLink from "./TestFlightLink.svelte";
+	import AppStoreLinks from "./AppStoreLinks.svelte";
 	let banner: HTMLDivElement;
 
 	onMount(() => {
@@ -40,7 +40,7 @@
 				class="px-2 py-1 italic font-extrabold text-white transition-all bg-indigo-500 rounded hover:bg-indigo-600 hover:text-gray-50"
 				>Nearest Color</a
 			>
-			will be an app that's a better version of this website in every way, including
+			is an app that's a better version of this website in every way, including
 			<a
 				class="font-bold"
 				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?banner"
@@ -54,7 +54,9 @@
 			>.
 		</p>
 
-		<TestFlightLink />
+		<div class="my-2">
+			<AppStoreLinks />
+		</div>
 		<!-- <p class="flex-shrink-0 mt-0">
 			<a
 				href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?banner"

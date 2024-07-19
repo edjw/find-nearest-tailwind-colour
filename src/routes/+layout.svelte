@@ -1,7 +1,7 @@
 <script>
 	import "$/app.css";
+	import AppStoreLinks from "$/components/AppStoreLinks.svelte";
 	import Banner from "$/components/Banner.svelte";
-	import TestFlightLink from "$/components/TestFlightLink.svelte";
 </script>
 
 <div class="container pt-4 mx-auto">
@@ -16,7 +16,7 @@
 					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?footer"
 					>Nearest Color</a
 				>
-				will be an app that's a better version of this website in every way, including
+				is an app that's a better version of this website in every way, including
 				<a
 					class="font-bold"
 					href="https://nearest-color.com/why-nearest-color-better-than-find-nearest-tailwind-colour?footer"
@@ -30,7 +30,9 @@
 				>.
 			</p>
 		</div>
-		<TestFlightLink />
+		<div class="my-2">
+			<AppStoreLinks />
+		</div>
 
 		<p>
 			Made by
