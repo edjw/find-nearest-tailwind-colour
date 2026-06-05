@@ -3,15 +3,16 @@
 
 	import { isValidColour } from "$/scripts/isValidColour";
 	import Header from "$/components/Header.svelte";
+
 	import ColourInput from "$/components/colourInput.svelte";
 	import TailwindResult from "$/components/tailwindResult.svelte";
 
 	import { colour as userColour } from "$/scripts/colourStore";
-	const tailwindVersion = "v4";
+	const tailwindVersion = "v3.3+";
 </script>
 
 <svelte:head>
-	<title>Find the nearest Tailwind Colour</title>
+	<title>Find the nearest Tailwind {tailwindVersion} Colour</title>
 </svelte:head>
 
 <Header {tailwindVersion} />
@@ -21,7 +22,7 @@
 		<ColourInput {tailwindVersion} />
 	</section>
 
-	{#if $userColour != null && isValidColour($userColour) && tailwindVersion.length}
+	{#if $userColour != null && isValidColour($userColour)}
 		<section class="mt-10">
 			<TailwindResult {tailwindVersion} />
 		</section>
