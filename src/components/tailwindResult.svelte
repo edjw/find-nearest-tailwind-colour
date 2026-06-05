@@ -1,9 +1,10 @@
 <script>
 	/**
-	 * @type {"v3.3+" | "v3.2" | "v2"}
+	 * @type {"v4" | "v3.3+" | "v3.2" | "v2"}
 	 */
 	export let tailwindVersion;
 	import { isValidColour } from "$/scripts/isValidColour";
+	import { tailwindColours as v4_colours } from "$/colourSets/v4_colours";
 	import { tailwindColours as v3_3_colours } from "$/colourSets/v3-3_colours";
 	import { tailwindColours as v3_2_colours } from "$/colourSets/v3-2_colours";
 	import { tailwindColours as v2_colours } from "$/colourSets/v2_colours";
@@ -12,7 +13,9 @@
 
 	let tailwindColours = {};
 
-	if (tailwindVersion === "v3.3+") {
+	if (tailwindVersion === "v4") {
+		tailwindColours = v4_colours;
+	} else if (tailwindVersion === "v3.3+") {
 		tailwindColours = v3_3_colours;
 	} else if (tailwindVersion === "v3.2") {
 		tailwindColours = v3_2_colours;
@@ -50,13 +53,13 @@
 
 <div class="flex flex-col gap-y-2">
 	<p class="font-semibold">
-		Nearest Tailwind Colour {tailwindVersion !== "v3.3+" ? ` in ${tailwindVersion}` : ""}
+		Nearest Tailwind Colour {tailwindVersion !== "v4" ? ` in ${tailwindVersion}` : ""}
 	</p>
 
 	<p class="mt-0 text-gray-700">
 		Here's the nearest colour to
 		<code>{$userColour.toUpperCase()}</code>
-		in {tailwindVersion !== "v3.3+"
+		in {tailwindVersion !== "v4"
 			? `Tailwind ${tailwindVersion}`
 			: `Tailwind's full colour
 			palette.`}
